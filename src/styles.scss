@@ -1,5 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
 
+@font-face {
+    font-family: 'RobotoMono';
+    src: url('assets/fonts/RobotoMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: RobotoMono;
+}
+
 body {
-    margin: 0; /* Reset margin to 0 */
+    margin: 0; // Reset margin to 0
+}
+
+//scrollbar behaviour all over the website
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: none; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #848484;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #646464;
+    cursor: pointer;
 }
