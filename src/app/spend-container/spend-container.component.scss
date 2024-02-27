@@ -1,0 +1,41 @@
+.main {
+    .spend-container-header {
+        height: 76px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 24px;
+        font-size: 18px;
+    }
+
+    .spend-container-data{
+        overflow: auto;
+        height: 500px;
+        .each-spend-box {
+            height: 76px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px 24px 24px;
+            font-size: 18px;
+            border: 1px solid black;
+            border-radius: 8px;
+    
+            .category-image-area {
+                min-width: 48px;
+                min-height: 48px;
+                margin: 14px;
+                border: 1px solid black;
+                border-radius: 4px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            .spend-details-area {
+                width: 100%;
+                margin: 14px 14px 14px 0px;
+            }
+        }
+    }
+}
