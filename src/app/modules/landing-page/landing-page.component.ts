@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { SpendContainerComponent } from "../spend-container/spend-container.component";
-import { SplitContainerComponent } from "../split-container/split-container.component";
+import { SpendContainerComponent } from '../spend-container/spend-container.component';
+import { SplitContainerComponent } from '../split-container/split-container.component';
 
 @Component({
     selector: 'app-landing-page',

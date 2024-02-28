@@ -1,0 +1,31 @@
+<div class="main">
+    <div class="spend-container-header">
+        Spend
+    </div>
+    <div class="spend-container-data">
+        <div class="month-header">
+            <div class="current-month">
+                February 2024
+            </div>
+            <div class="current-month-spending">
+                {{getTotalSpendInCurrentMonth(spendData)}}
+            </div>
+        </div>
+        <div class="each-spend-box" *ngFor="let data of spendData">
+            <div class="category-image-area">{{getInitialOfCategory(data.category)}}</div>
+            <div class="spend-details-area">
+                <div class="details">
+                    <div class="description">
+                        {{data.description}}
+                    </div>
+                    <div class="date-and-category">
+                        {{data.lastModifiedDate}} | {{data.category}}
+                    </div>
+                </div>
+                <div class="amount">
+                    {{getFinalAmountWithDecimal(data.amount)}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
