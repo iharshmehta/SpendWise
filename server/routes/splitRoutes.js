@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-//Get plit list
+//Get split list
 //GET
 router.route("/").get((req, res) => {
     res.status(200).json({response: `Get split list.`});

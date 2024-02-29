@@ -1,35 +1,32 @@
 const express = require("express");
 const router = express.Router();
+const { 
+    getSpendList,
+    getIndividualSpendDetails,
+    addSpendDetails,
+    editSpendDetails,
+    deleteSpendDetails
+} = require("../controllers/spendController");
 
 //Get spend list
 //GET
-router.route("/").get((req, res) => {
-    res.status(200).json({response: `Get spend list.`});
-});
+router.route("/").get(getSpendList);
 
 //Get individual spend details
 //GET
-router.route("/:id").get((req, res) => {
-    res.status(200).json({response: `Get individual spend details of ${req.params.id}.`});
-});
+router.route("/:id").get(getIndividualSpendDetails);
 
 //Add spend details
 //POST
-router.route("/").post((req, res) => {
-    res.status(200).json({response: `Add spend details.`});
-});
+router.route("/").post(addSpendDetails);
 
 //Edit spend details
 //PUT
-router.route("/:id").put((req, res) => {
-    res.status(200).json({response: `Edit spend details of ${req.params.id}.`});
-});
+router.route("/:id").put(editSpendDetails);
 
 //Delete spend details
 //DELETE
-router.route("/:id").delete((req, res) => {
-    res.status(200).json({response: `Delete spend details of ${req.params.id}.`});
-});
+router.route("/:id").delete(deleteSpendDetails);
 
 //to export routers
 module.exports = router;
