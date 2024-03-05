@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "angular",
+      "label": "client",
       "type": "npm",
       "script": "start",
       "isBackground": true,
@@ -19,6 +19,19 @@
             "regexp": "bundle generation complete"
           }
         }
+      }
+    },
+    {
+      "label": "server",
+      "type": "shell",
+      "command": "npm",
+      "isBackground": true,
+      "args": [
+        "run",
+        "dev"
+      ],
+      "options": {
+        "cwd": "server"
       }
     }
   ]
