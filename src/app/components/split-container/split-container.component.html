@@ -1,1 +1,51 @@
-<p>split-container works!</p>
+<div class="main">
+    <div class="spend-container-header">
+        Splits
+    </div>
+    <div class="overall-status-splits-header">
+        <div class="overall-status-splits" [ngClass] = "{ 'friends-owe-you-class': !isUserInDebt, 'you-owe-friends-class': isUserInDebt }">
+            {{ getOverallStatusOfUsersSplits(isUserInDebt) }}
+        </div>
+        <div class="overall-splits-amount" [ngClass] = "{ 'friends-owe-you-class': !isUserInDebt, 'you-owe-friends-class': isUserInDebt }">
+            {{ getTotalSpendInCurrentMonth(spendData) }}
+        </div>
+    </div>
+    <div class="splits-container-data">
+        <div class="each-split-box" *ngFor="let data of spendData">
+            <div class="main-splits-user-data">
+                <div class="category-image-area">{{getInitialOfCategory(data.category)}}</div>
+                <div class="user-splits-details-area">
+                    <div class="user-details">
+                        {{data.description}}
+                    </div>
+                    <div class="amount">
+                        {{getFinalAmountWithDecimal(data.amount)}}
+                    </div>
+                </div>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="latests-splits-with-user-data">
+                <span class="subdirectory-icon"></span>
+                <div class="category-image-area">{{getInitialOfCategory(data.category)}}</div>
+                <div class="latest-splits-details-area">
+                    <div class="details">
+                        <div class="description">
+                            {{data.description}}
+                        </div>
+                        <div class="date-and-category">
+                            {{data.lastModifiedDate}} | {{data.category}}
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <div class="amount-heading">
+                            owes you
+                        </div>
+                        <div class="actual-amount">
+                            {{getFinalAmountWithDecimal(data.amount)}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,129 @@
+.main {
+    .spend-container-header {
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 24px;
+        margin-bottom: 3px;
+        font-size: 34px;
+    }
+
+    .overall-status-splits-header {
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 24px 12px 24px;
+        font-size: 18px;
+        font-weight: medium;
+        .friends-owe-you-class {
+            color: #27AE60;
+        }
+        .you-owe-friends-class {
+            color: #FF6347;
+        }
+    }
+
+    .splits-container-data{
+        overflow: auto;
+        height: 498px;
+        .each-split-box {
+            height: 148px;
+            margin: 0px 19px 24px 24px;
+            font-size: 18px;
+            border: 1px solid black;
+            border-radius: 8px;
+            .category-image-area {
+                min-width: 48px;
+                min-height: 48px;
+                margin: 14px;
+                border: 1px solid black;
+                border-radius: 4px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            mat-divider {
+                color: #707070;
+                border-top-width: 1px;
+                margin-left: 76px;
+                margin-right: 14px;
+            }
+            .subdirectory-icon {
+                height: 15px;
+                width: 18px;
+                border-bottom: 3px solid #000000;
+                border-left: 3px solid #000000;
+                margin: 19px 7px 30px 38px;
+            }
+            .main-splits-user-data {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 72px;
+                .user-splits-details-area {
+                    width: 100%;
+                    margin: 14px 14px 14px 0px;
+                    display: flex;
+                    justify-content: space-between;
+                    .user-details {
+                        font-size: 24px;
+                        font-weight: bold;
+                    }
+                    .amount {
+                        font-size: 26px;
+                        font-weight: bold;
+                        text-align: right;
+                        padding-left: 8px;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+            .latests-splits-with-user-data {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 76px;
+                .latest-splits-details-area {
+                    width: 100%;
+                    margin: 14px 14px 14px 0px;
+                    display: flex;
+                    justify-content: space-between;
+                    .details {
+                        flex-grow: 1;
+                        .description {
+                            font-size: 20px;
+                            font-weight: bold;
+                            margin-bottom: 4px;
+                        }
+                        .date-and-category {
+                            font-size: 14px;
+                            font-weight: bold;
+                            color: #5C5C5C;
+                        }
+                    }
+                    .amount {
+                        flex-grow: 1px;
+                        .amount-heading {
+                            font-size: 14px;
+                            font-weight: bold;
+                            padding-left: 8px;
+                            padding-bottom: 4px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: end;
+                        }
+                        .actual-amount {
+                            font-size: 22px;
+                            font-weight: bold;
+                            text-align: right;
+                            padding-left: 8px;
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
