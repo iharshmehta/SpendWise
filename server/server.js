@@ -10,7 +10,7 @@ connectMongoDB();
 
 const app = express();
 
-const port = process.env.port || 5000;
+const port = process.env.PORT;
 
 //json parser
 app.use(express.json());
